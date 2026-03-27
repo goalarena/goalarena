@@ -1,0 +1,1 @@
+DELETE FROM public.news_items WHERE slug = 'champions-league-quarter-final-draw';

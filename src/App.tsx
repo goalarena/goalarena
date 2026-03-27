@@ -1,4 +1,3 @@
-function App() {
 const btn = (color: string) => ({
   background: color,
   color: "white",
@@ -8,6 +7,8 @@ const btn = (color: string) => ({
   cursor: "pointer",
   fontWeight: "bold"
 });
+
+function App() {
   return (
     <div>
       {/* Navbar */}
@@ -40,25 +41,28 @@ const btn = (color: string) => ({
         <h1 style={{ fontSize: "40px" }}>
           Live Football Scores, Fixtures & Results
         </h1>
+
         <p style={{ marginTop: "10px", opacity: 0.7 }}>
           Stay up-to-date with real-time scores and news
         </p>
+
+        {/* Buttons */}
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "15px",
+          marginTop: "20px",
+          flexWrap: "wrap"
+        }}>
+          <button style={btn("#22c55e")}>⚡ Live</button>
+          <button style={btn("#3b82f6")}>📰 News</button>
+          <button style={btn("#a855f7")}>🔄 Transfers</button>
+          <button style={btn("#f97316")}>▶ Highlights</button>
+          <button style={btn("#eab308")}>🏆 Leagues</button>
+        </div>
       </div>
     </div>
   );
 }
 
 export default App;
-<div style={{
-  display: "flex",
-  justifyContent: "center",
-  gap: "15px",
-  marginTop: "20px",
-  flexWrap: "wrap"
-}}>
-  <button style={btn("#22c55e")}>⚡ Live</button>
-  <button style={btn("#3b82f6")}>📰 News</button>
-  <button style={btn("#a855f7")}>🔄 Transfers</button>
-  <button style={btn("#f97316")}>▶ Highlights</button>
-  <button style={btn("#eab308")}>🏆 Leagues</button>
-</div>
